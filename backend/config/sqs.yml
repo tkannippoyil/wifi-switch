@@ -1,0 +1,18 @@
+defaults: &defaults
+  region: 'us-east-1'
+
+development:
+  <<: *defaults
+  queue: 'worker-development'
+
+sandbox:
+  <<: *defaults
+  queue: 'worker-development'
+
+internal:
+  <<: *defaults
+  queue: 'worker-staging'
+
+production:
+  <<: *defaults
+  queue: 'worker-production'

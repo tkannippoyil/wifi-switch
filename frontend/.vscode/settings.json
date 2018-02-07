@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/suyati/.platformio/penv/bin:/home/suyati/.rbenv/shims:/home/suyati/.rbenv/bin:/home/suyati/torch/install/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin"
+    }
+}

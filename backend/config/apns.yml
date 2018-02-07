@@ -1,0 +1,23 @@
+defaults: &defaults
+  passphrase: ''
+  app_name: 'ios_app'
+
+development:
+  <<: *defaults
+  certificate: 'temp-app-apns-dev.pem'
+  environment: 'sandbox'
+
+sandbox:
+  <<: *defaults
+  certificate: 'temp-app-apns-dev.pem'
+  environment: 'sandbox'
+
+internal:
+  <<: *defaults
+  certificate: 'temp-app-apns-dev.pem'
+  environment: 'sandbox'
+
+production:
+  <<: *defaults
+  certificate: 'temp-app-apns.pem'
+  environment: 'production'

@@ -1,0 +1,105 @@
+source 'https://rubygems.org'
+ruby '2.2.2'
+
+# Rails
+gem 'rails', '~>5.1.0'
+
+# DB (Postgres)
+gem 'pg'
+
+# Cache
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rails'
+gem 'redis-rack-cache'
+
+# Puttin' in work
+gem 'resque', require: 'resque/server'
+gem 'resque-scheduler', require: 'resque/scheduler'
+
+# Server
+gem 'thin'
+
+# Auth stuff
+gem 'devise'
+gem 'cancancan'
+gem 'rack-cors', require: 'rack/cors'
+
+# Date/time helpers
+gem 'ruby-duration'
+
+# Data syndication
+gem 'active_model_serializers'
+
+# Bulk data import
+gem 'activerecord-import'
+
+# TODO: Probably remove these from here once we're not
+# using them for production population
+gem 'faker'
+gem 'factory_girl_rails'
+
+# Send emails
+gem 'aws-ses', require: 'aws/ses'
+gem 'grocer'
+
+# Used to infer user's timezone from a request
+gem 'geocoder'
+gem 'timezone'
+
+# Gems used only for assets and not required
+# in production environments by default.
+gem 'sass-rails'
+gem 'coffee-rails'
+
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', :platforms => :ruby
+gem 'uglifier'
+
+gem 'paperclip'
+
+gem 'newrelic_rpm'
+gem 'rpush'
+
+group :development do
+  gem 'hirb'
+  gem 'better_errors'
+  gem 'rails_best_practices'
+  gem 'binding_of_caller'
+  gem 'httparty'
+
+  # to rename the app
+  gem 'rename'
+end
+
+group :test do
+  gem 'rspec-rails'   # These two have been moved to the top of the :test group so that Zeus works properly.
+  #gem 'test-unit'
+  #gem 'minitest'
+  gem 'shoulda-matchers'# See https://github.com/burke/zeus/issues/134
+  gem 'simplecov'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'ci_reporter'
+  gem 'zeus'
+  gem 'zeus-parallel_tests'
+end
+
+group :development, :test do
+  gem 'parallel_tests'
+  gem 'rack-livereload'
+end
+
+group :production, :internal, :sandbox do
+  # Heroku
+  gem 'rails_12factor'
+end
+
+# Static pages e.g. index.html, routes.html
+gem 'high_voltage'
+
+# AWS s3 upload
+gem 'aws-sdk', require: 'aws-sdk'
+gem 'active_scheduler'
+
+gem 'mqtt', :git => 'https://github.com/njh/ruby-mqtt.git'

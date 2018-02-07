@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: interface_api_dev
+  username: rails_api
+  password: rails_api
+  host: localhost
+  min_messages: warning
+
+test:
+  adapter: postgresql
+  database: interface_api_test<%= ENV['TEST_ENV_NUMBER'] %>
+  username: rails_api
+  password: rails_api
+  host: localhost

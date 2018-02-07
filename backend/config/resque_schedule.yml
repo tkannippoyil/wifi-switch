@@ -1,0 +1,4 @@
+SchedulerJob:
+  cron: "*/1 * * * *"
+  queue: "scheduler"
+  description: "scheduled turn on/off actions"

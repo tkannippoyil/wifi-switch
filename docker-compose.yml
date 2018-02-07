@@ -1,0 +1,20 @@
+version: '2.1'
+services:
+  cal_backend:
+    container_name: cal_backend
+    build: ./backend
+    network_mode: "host"
+    ports:
+      - "3001:3001"
+    command: /bin/bash -c "rake db:setup && rails server -b 35.192.166.241 -p 3001"
+    environment:
+      RAILS_ENV: development
+  cal_frontend:
+    network_mode: "host"
+    container_name: cal_frontend
+    build: ./frontend
+    ports:
+      - "3001:3001"
+    depends_on:
+      - cal_backend
+    command: npm start

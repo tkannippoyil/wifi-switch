@@ -1,0 +1,15 @@
+development:
+  admin-emails:
+    - support@test.net
+
+sandbox:
+  admin-emails:
+    - support@test.net
+
+internal:
+  admin-emails:
+    - support@test.net
+
+production:
+  admin-emails:
+    - support@test.net

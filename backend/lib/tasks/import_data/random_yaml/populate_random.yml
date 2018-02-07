@@ -1,0 +1,16 @@
+mock_data:
+  user_characteristics:
+    certificates: ['RSA','apprentice chef','commissary chef','demi chef','sous chef','pastry chef','manual handling','OH&S','security','barista','drivers licence','chemical use']
+    areas:        ['F&B','bar','front of house','back of house','kitchen','amenities','loading bay','stockroom','public']
+    low_profile:  ['runner','cocktail','functions','security']
+    high_profile: ['banquet','corporate','a la carte','government']
+    desirable:    ['responsible','trustworthy','intelligent','well-presented','professional','discreet','punctual','english','fast','uses initiative','timely']
+    undesirable:  ['sloppy','clumsy','late','attitude','poor presentation','unfit']
+    skills:       ['communication','supervisor','coffee','sandwich production','trolley use','cleaning','cash','alcohol','fit','fine wine','cooking','food']
+  avoid_for: ['corporate','cocktail','public','high-profile','government']
+
+  users:
+    demo:
+      email:     'demo@test.net'
+      profile:   {first_name: 'Demo', last_name: 'Dave'}
+      superuser: false
